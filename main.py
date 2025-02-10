@@ -1,8 +1,8 @@
-import pickel
+import pickle
 from fastapi import FastAPI
 from pydantic import BaseModel
 with open("iris_model.pkl",'rb') as f:
-  model = pickel.load(f)
+  model = pickle.load(f)
 app = FastAPI()
 class IrisInput(BaseModel):
   sl:float

@@ -30,7 +30,7 @@ def predict(data:IrisInput):
   input_data = [[data.sl,data.sw,data.pl,data.pw]]
   prediction = model.predict(input_data)[0]
   return {'prediction is:',int(prediction)}
-@app.post("/predict/diabetes/"):
+@app.post("/predict/diabetes/")
 def predict_dia(data:DiaInput):
   input_data = [[data.age, data.sex, data.bmi, data.bp, data.s1, data.s2, data.s3, data.s4, data.s5, data.s6]]
   prediction = model2.predict(input_data)[0]

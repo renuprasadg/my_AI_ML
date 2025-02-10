@@ -6,8 +6,8 @@ WORKDIR /app
 
 # Copy the requirements and others files file into the container.
 COPY requirements.txt .
-COPY main.py
-COPY iris_model.pkl
+COPY main.py .
+COPY iris_model.pkl .
 
 # Install dependencies.
 RUN pip install --no-cache-dir -r requirements.txt
